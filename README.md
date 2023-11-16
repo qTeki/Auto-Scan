@@ -9,7 +9,7 @@ Run the command as root
 
 Then privide the IP
 
-´´´[~] IP: "IP-ADDRESS"´´´
+```[~] IP: <IP-ADDRESS>```
 
 # Screenshots
  ![](https://github.com/qTeki/Auto-Scan/blob/main/Scan.png)
