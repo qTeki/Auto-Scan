@@ -1,4 +1,5 @@
 # Auto Scan
+ Discailmer: This script is intended to be used in CTF only due to its loudness.
  A Bash script for automated port and service scanning using nmap.
 # Usage:
 
