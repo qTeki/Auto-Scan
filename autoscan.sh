@@ -21,8 +21,7 @@ input(){
 
 	sleep 0.5
 
-	port_scan="nmap -p- -sS -vvv -Pn -n --open --min-rate 5000 $ip_address -oG allPorts"
-	eval "$port_scan"
+	nmap -p- -sS -vvv -Pn -n --open --min-rate 5000 $ip_address -oG allPorts
 
 	open_ports=$(cat allPorts | grep -oP '\d{1,5}/open' | cut -d "/" -f 1 | xargs | tr ' ' ',')
 
@@ -30,8 +29,7 @@ input(){
 
 	sleep 0.5
 
-	service_scan="nmap -sCV -p${open_ports} --min-rate 5000 $ip_address -oN targeted"
-	eval "$service_scan"
+	nmap -sCV -p${open_ports} --min-rate 5000 $ip_address -oN targeted
 }
 
 input
